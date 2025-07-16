@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Image Table</title>
+    <style>
+        body {
+            font-family: italic;
+        }
+
+        .container {
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: chartreuse;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgray;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Image -->
+        <img src="https://media.canva.com/v2/mockup-template-rasterize/image0:s3%3A%2F%2Ftemplate.canva.com%2FEAGGMu6NT-o%2F1%2F0%2F1600w-opdOJb2tOUE.jpg/mockuptemplateid:E3Kn_CfJX/size:L?csig=AAAAAAAAAAAAAAAAAAAAACoKi6t3GerQK78dQInRCkaQtS-tsWzSfPA-yfLxb6V6&exp=1744475343&osig=AAAAAAAAAAAAAAAAAAAAAB_3b6YmsWRqVQwMgWM2kpnpsEfS6UIvGmoCtM9G3-IM&seoslug=blue-and-orange-modern-welcome-banner&signer=marketplace-rpc"
+            alt="Sample Banner">
+
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <table>
+            <tr>
+                <th>Sr No</th>
+                <th>Field</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Name</td>
+                <td>Nikhil Lanje</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Email</td>
+                <td>nikhillanje@123.comm</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Message</td>
+                <td>Hello my name is nikhil!</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

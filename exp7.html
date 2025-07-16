@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #clock {
+            font-size: 80px;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <?php
+        date_default_timezone_set('UTC');
+        echo date('H:i:s');
+        ?>
+    </div>
+
+    <script>
+        let serverTime = new Date("<?php echo date('Y-m-d H:i:s'); ?>");
+
+        function updateClock() {
+            serverTime.setSeconds(serverTime.getSeconds() + 1);
+            let hours = serverTime.getHours().toString().padStart(2, '0');
+            let minutes = serverTime.getMinutes().toString().padStart(2, '0');
+            let seconds = serverTime.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
